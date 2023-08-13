@@ -1,8 +1,10 @@
+import Navbar from '@/components/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Syne } from 'next/font/google'
+import Hero from '@/components/Hero'
 
-const inter = Inter({ subsets: ['latin'] })
+const syne = Syne({ subsets: ['latin'], weight: ['500'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +17,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className='max-h-screen max-w-screen'>
+      <body className={`${syne.className} bg-[#fffff] m-0 p-0 `}>
+      
+        {children
+        }</body>
     </html>
   )
 }
