@@ -2,8 +2,9 @@ import Navbar from '@/components/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Syne } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 
-const syne = Syne({ subsets: ['latin'], weight: ['500'] })
+const fontt = Syne({ subsets: ['latin'], weight: ['500'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='max-h-screen max-w-screen'>
-      <body className={`${syne.className} bg-[#fffff] m-0 p-0 `}>
+      <body className={`${fontt.className} bg-[#fffff] m-0 p-0 `}>
         {children}
       </body>
     </html>
