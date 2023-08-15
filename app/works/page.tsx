@@ -34,8 +34,6 @@ const page = () => {
                Cranes can lift materials such as concrete, steel, wood, or bricks from the ground to higher levels or from one place to another. For example, tower cranes are used to construct tall buildings or bridges by lifting materials to the desired height and position1.
                </p>
                </div>
-               
-               
               </div>
               <div className="flex-1 p-2  relative">
                 
