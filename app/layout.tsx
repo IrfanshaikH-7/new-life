@@ -18,9 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en" className='max-h-screen max-w-screen'>
       <body className={`${syne.className} bg-[#fffff] m-0 p-0 `}>
-        
-        {children
-        }</body>
+        {children}
+      </body>
     </html>
   )
 }

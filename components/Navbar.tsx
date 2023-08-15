@@ -11,7 +11,7 @@ function Navbar() {
 
     <section className="flex justify-between ">
       <div>
-        logo
+        NewLife
       </div>
       <div className=" flex justify-end">
         {NavLinks.map((link, i) => (
