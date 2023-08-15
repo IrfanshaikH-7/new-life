@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
 import Image from 'next/image'
+import {  } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
         <div className='w-[90%] h-[80%] bg-blue-200 rounded-lg z-[9999] shadow-2xl'>
         <Hero />
         </div>
-        <div className='w-[90%] h-auto absolute  bottom-10'>
+        <div className='w-[90%] max-2xl max-md:hidden h-auto absolute  bottom-10'>
           <Navbar />
         </div>
       </div>
@@ -22,9 +23,36 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='relative -z-10 flex flex-col mx-auto w-full max-w-4xl overflow-hidden p-16'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eum neque ratione modi molestias eveniet libero incidunt, sed, dolorem odit laudantium cupiditate asperiores corrupti voluptatem deleniti fugiat? Odit neque provident nam quasi architecto rerum id tempora eveniet animi nemo in recusandae ex esse consequatur sint minima ratione vitae ipsa porro doloribus explicabo, voluptatum voluptatem voluptatibus! Voluptas rem modi maxime iure dolore tempore laudantium quasi ratione similique nostrum ab nemo voluptate ipsum consectetur quidem aliquam fugiat, excepturi enim iusto. Itaque sunt delectus iure doloribus voluptates ducimus dolore, at perferendis ratione expedita beatae commodi et numquam corrupti ad officia iste exercitationem vel veritatis neque. Quibusdam natus soluta, exercitationem iste aut quas nisi distinctio vitae deserunt. Quod expedita magni dignissimos deserunt incidunt et, praesentium nisi perspiciatis saepe fugit accusantium placeat sapiente explicabo dolores possimus, porro repellat voluptatibus. Optio voluptate nisi dolor necessitatibus rem provident aliquam debitis quod in quasi laudantium cum distinctio, deserunt odio, accusamus expedita modi? Sunt voluptas ipsa dolorem recusandae maxime vel iure voluptatum natus cumque cupiditate! Saepe tenetur architecto itaque culpa recusandae amet aut sed quidem minima iure excepturi praesentium eius beatae magnam dolorem fuga, facilis quae iusto officiis repellat! Ducimus perferendis culpa quis, beatae doloremque corrupti harum sint optio. Perspiciatis impedit recusandae ea porro sequi eligendi repudiandae fugit laudantium sunt excepturi tempora aliquid, repellat dolorum quaerat, pariatur odit quisquam laboriosam at necessitatibus incidunt quo voluptas provident dolore. Eaque at eos dolores, veritatis nemo labore rerum, earum ipsum dignissimos minus soluta blanditiis facilis hic eius quaerat! Natus velit sit unde laudantium, ipsum odit facere dolorem et ad excepturi? Quae doloribus, explicabo vero nesciunt expedita totam at velit iste fugit similique dolorum commodi rerum aperiam nisi culpa quas necessitatibus optio adipisci nemo molestiae consectetur perferendis libero ut temporibus! Expedita quis aliquid illo reprehenderit doloribus necessitatibus. Saepe quis asperiores nulla magnam reiciendis enim sint, quasi, nisi molestias provident voluptate repellendus tempora labore esse ab quas autem deleniti at odio culpa repellat sapiente, obcaecati ex pariatur? Veritatis, temporibus quam delectus dolor ullam natus eligendi. Dolorem iusto quidem officiis ipsa ducimus iure, ex maxime pariatur, qui facilis eveniet ratione labore in excepturi recusandae, exercitationem saepe. Deleniti inventore ratione odio voluptas necessitatibus iusto quibusdam expedita laborum ipsa! Aspernatur at ad officiis quaerat dignissimos, nisi tenetur praesentium, magni expedita rem quidem. Dicta eum maxime, cupiditate ab voluptatem temporibus reiciendis illo sit quas, porro qui at asperiores ipsum voluptatum quaerat obcaecati nam veritatis odio deserunt accusantium vitae!
-
+        <div className='relative -z-10 flex flex-col mx-auto w-full h-full max-w-7xl
+        max overflow-hidden px-4 justify-center items-center text-center'>
+          <h1 className='max-md:text-base text-3xl font-semibold mx-auto'>What we offer...</h1>
+          <p className='text-slate-500 p-4 text-base'>
+          At <span className='font-bold'>New Life Crane Services</span>, we offer a range of crane solutions for your lifting needs. Whether you need a crane for construction, industrial, or residential projects, we have the right equipment and expertise to handle any job.
+          </p>
+          <div>
+            <p className='text-slate-500 font-bold text-center'>Some of the services we offer are:</p>
+            <ul className='p-1 flex text-justify flex-col'>
+              <li className='text-base text-slate-500 p-2'>
+                <span className='font-bold' >
+                  Mobile crane rental:
+                </span> We have a fleet of mobile cranes that can be transported to any location and set up quickly. Our mobile cranes can lift up to 200 tons and reach up to 60 meters in height. They are ideal for moving heavy materials, equipment, or structures in tight spaces.</li>
+              <li className='text-base text-slate-500 p-2'>
+                <span className='font-bold' >
+                  Tower crane rental:
+                </span> We have a variety of tower cranes that can be installed on site and operated remotely. Our tower cranes can lift up to 500 tons and reach up to 80 meters in height. They are perfect for building high-rise structures, bridges, or dams.</li>
+              <li className='text-base text-slate-500 p-2'>
+                <span className='font-bold' >
+                   Crane operator training:
+                </span> We have a team of certified and experienced crane operators who can train you or your staff on how to operate our cranes safely and efficiently. We offer both theoretical and practical training courses that cover all aspects of crane operation, maintenance, and safety.</li>
+              <li className='text-base text-slate-500 p-2'>
+                <span className='font-bold' >
+                  Crane maintenance and repair:
+                </span> We have a dedicated service team that can provide regular maintenance and repair services for our cranes. We use the latest tools and technology to ensure that our cranes are always in optimal condition and ready for use.</li>
+            </ul>
+            <p className='text-base text-slate-500 p-2'>
+            If you are looking for a reliable and professional crane service provider in Hyderabad, Telangana, and India, look no further than <span className='font-bold'>New Life Crane Services</span>. Contact us today to get a free quote and consultation for your crane needs. We are available 24/7 and ready to serve you with excellence. 🏗️
+            </p>
+          </div>
         </div>
 
 

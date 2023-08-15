@@ -15,3 +15,16 @@
     @apply text-slate-600
   }
 }
+.swiper{
+  width: 1290px;
+  height: 340px;
+  background: rgb(136, 185, 234);
+  opacity: 80%;
+  row-gap: 10px;
+  color: azure;
+  border-radius: 12px;
+  position: relative;
+  border:1px solid rgb(128, 171, 236);
+  box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.75);;
+  
+}

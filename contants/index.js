@@ -2,23 +2,28 @@
 export const NavLinks = [
     {
         route: '/',
-        label: "Home"
+        label: "Home",
+        icon: "AlignHorizontalJustifyCenter"
     },
     {
         route: '/works',
-        label: "Works"
+        label: "Works",
+        icon: "AlignHorizontalJustifyCenter"
     },
     {
         route: '/gallery',
-        label: "Gallery"
+        label: "Gallery",
+        icon: "AlignHorizontalJustifyCenter"
     },
     {
         route: '/about',
-        label: "About"
+        label: "About",
+        icon: "AlignHorizontalJustifyCenter"
     },
     {
         route: '/contact',
-        label: "Contact"
+        label: "Contact",
+        icon: "AlignHorizontalJustifyCenter"
     },
 
 ]

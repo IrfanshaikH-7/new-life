@@ -3,6 +3,7 @@ import { NavLinks } from '@/contants/index.js'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRef} from 'react'
+import { AlignHorizontalJustifyCenter } from 'lucide-react';
 function Navbar() {
   const pathname = usePathname()
   const navref = useRef()
