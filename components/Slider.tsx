@@ -76,7 +76,7 @@ export default function App() {
         {
           imgs.map((img: any, i) => (
             <div className='!rounded-3xl'>
-              <SwiperSlide key={img.label} className={`${active === i ? " text-teal-800 !scale-110 p-2 md:mt-10 mt-10 transition duration-500 delay-100 md:!h-64 !h-52 ease-in " : " text-teal-800 blur-[2px] !scale-75 p-2 md:!h-64  !h-52 mt-10 transition-all duration-500 delay-100 ease-in"} bg-white rounded-lg shadow-lg`}>
+              <SwiperSlide key={img.label} className={`${active === i ? " text-teal-800 !scale-110 p-2 md:mt-10 mt-10 transition duration-500 delay-100 md:!h-64 !h-52 ease-in " : " text-teal-800 blur-[2px] !scale-75 p-2 md:!h-64  !h-52 mt-10 transition-all duration-500 delay-100 ease-in"} bg-white rounded-lg shadow-md`}>
                 <Image
                   src={img.image}
                   alt='img'
