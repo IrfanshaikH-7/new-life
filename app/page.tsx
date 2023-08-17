@@ -8,7 +8,7 @@ export default function Home() {
         <div className='w-[90%] h-[80%] bg-blue-200 rounded-lg z-[9999] shadow-2xl'>
           <Hero />
         </div>
-        <div className='w-[90%] max-2xl max-md:hidden h-auto absolute  bottom-10'>
+        <div className='w-[90%] max-2xl max-md:hidden h-auto absolute  bottom-8'>
           <Navbar />
         </div>
       </div>

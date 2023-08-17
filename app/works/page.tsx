@@ -52,10 +52,8 @@ const page = () => {
           </div>
 
 
-          <div className="flex flex-col h-full ">
-            <p className="text-slate-500 text-base text-center px-4">
-              Operating cranes for various purposes, such as lifting materials, equipment, or personnel, loading or unloading trucks or ships, erecting structures, or demolishing buildings
-            </p>
+          <div className="flex flex-col h-full mt-8 ">
+            
             <div className="flex flex-col md:flex-row 
             max-w-7xl mx-auto mt-2 p-4">
               <div className="flex-1 p-2 justify-center items-center ">
