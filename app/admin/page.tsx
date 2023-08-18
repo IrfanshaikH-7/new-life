@@ -1,7 +1,5 @@
+import Navbar from "@/components/Navbar"
 
-import { ContactForm } from '@/components/ContactForm'
-import Navbar from '@/components/Navbar'
-import React from 'react'
 
 const page = () => {
   return (
@@ -11,7 +9,12 @@ const page = () => {
           <Navbar />
         </div>
       </div>
-      <ContactForm />
+      <section className="flex max-w7x1 h-full ">
+        <div className="flex-1 ">
+            
+        </div>
+
+      </section>
     </>
   )
 }

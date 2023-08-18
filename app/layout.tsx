@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='max-h-screen max-w-screen'>
+    <html lang="en" className='max-h-screen max-w-screen scroll-smooth no-scrollbar'>
       <body className={`${fontt.className} bg-[#fffff] m-0 p-0 `}>
         {children}
       </body>

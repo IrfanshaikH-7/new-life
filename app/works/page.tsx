@@ -12,11 +12,11 @@ const page = () => {
           </div>
         </div>
         <div className="  mt-52 w-full flex h-full justify-center items-center">
-          <div className="hidden sm:flex h-full w-full items-center justify-center">
+          <div className="hidden sm:flex h-full w-full items-center justify-center max-w-7xl">
             <Slider />
           </div>
         </div>
-        <div>
+        <div className="max-w-7xl mx-auto">
           <h1 className="max-w-7xl  mt-12 mx-auto text-center text-3xl ">
             Work we do...
           </h1>
@@ -24,9 +24,9 @@ const page = () => {
 
           <div className="flex flex-col h-full max-w-7xl mx-auto p-2">
             <p className="text-slate-500 text-base text-center px-4">
-            The works and service provided by crane services require skilled and competent personnel who have knowledge and experience in handling different types of cranes. They also need to follow the safety rules and regulations for working with cranes. Hence,
+              The works and service provided by crane services require skilled and competent personnel who have knowledge and experience in handling different types of cranes. They also need to follow the safety rules and regulations for working with cranes. Hence,
               <br />
-               We Operate cranes for various purposes, such as lifting materials, equipment, or personnel, loading or unloading trucks or ships, erecting structures, or demolishing buildings while Maintaining cranes to ensure their optimal performance and safety.
+              We Operate cranes for various purposes, such as lifting materials, equipment, or personnel, loading or unloading trucks or ships, erecting structures, or demolishing buildings while Maintaining cranes to ensure their optimal performance and safety.
             </p>
             <div className="flex flex-col md:flex-row 
             max-w-7xl mx-auto mt-2 p-4">
@@ -94,7 +94,7 @@ const page = () => {
                 <div className="self-center p-2 lg:mt-24 mt-6" >
                   <p className="text-slate-500 text-2xl font-bold text-center">Erecting structures:</p>
                   <p className="text-slate-500 text-base text-center items-center">
-                  Cranes can erect structures such as towers, masts, antennas, or wind turbines by lifting and assembling the components of the structure. For example, crawler cranes or truck-mounted cranes are used to erect structures at remote or difficult locations
+                    Cranes can erect structures such as towers, masts, antennas, or wind turbines by lifting and assembling the components of the structure. For example, crawler cranes or truck-mounted cranes are used to erect structures at remote or difficult locations
                   </p>
                 </div>
               </div>
@@ -113,7 +113,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className="flex flex-col h-full mt-8 ">
+          <div className="flex flex-col h-full mt-8  ">
 
             <div className="flex flex-col md:flex-row 
             max-w-7xl mx-auto mt-2 p-4">
@@ -134,12 +134,17 @@ const page = () => {
                 <div className="self-center p-2 lg:mt-24 mt-6" >
                   <p className="text-slate-500 text-2xl font-bold text-center">Demolishing buildings:</p>
                   <p className="text-slate-500 text-base text-center items-center">
-                  Cranes can demolish buildings by lifting and dropping wrecking balls, hydraulic breakers, or explosives on the structure. For example, demolition cranes or telescopic cranes are used to demolish buildings at urban or industrial sites
+                    Cranes can demolish buildings by lifting and dropping wrecking balls, hydraulic breakers, or explosives on the structure. For example, demolition cranes or telescopic cranes are used to demolish buildings at urban or industrial sites
                   </p>
                 </div>
               </div>
             </div>
+
+
           </div>
+          <p className="text-slate-500 text-center mt-8 ">
+            We offer a wide range of crane services for any project size and scope. Whether you need a crane for a day, a week, or a month, we have the right equipment and personnel for the job. We can handle any lifting challenge, from heavy machinery and materials to delicate artworks and sculptures. We have experience working with clients from various sectors, such as residential, commercial, industrial, and public.
+          </p>
 
         </div>
 
