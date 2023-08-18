@@ -11,7 +11,10 @@ const page = () => {
           <Navbar />
         </div>
       </div>
-      <ContactForm />
+      <div>
+        <ContactForm />
+      </div>
+      
     </>
   )
 }
