@@ -16,6 +16,8 @@ import {
 import { Input } from "@/components/ui/input"
 import { useForm } from "react-hook-form"
 import { contactSchema } from "@/lib/validations/contact"
+import { Textarea } from "./ui/textarea"
+import Map from "./Map"
 
 // const formSchema = z.object({
 //   username: z.string().min(2, {
@@ -47,58 +49,68 @@ export function ContactForm() {
 
 
   return (
-    <section className="w-5/6 mx-auto">
+    <section className="flex justify-center gap-2 items-center w-full h-full p-2 mx-auto flex-col lg:flex-row ">
+      <div className="flex items-center justify-center flex-1 flex-col bg-blue-50 rounded-3xl border-2 border-t-emerald-300 pt-2 lg:pt-8 h-full w-full min-h-fit">
 
-   
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Name</FormLabel>
-              <FormControl>
-                <Input placeholder="Enter your name" {...field} />
-              </FormControl>
-              
-              <FormMessage />
-            </FormItem>
-          )}
-        />
 
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input placeholder="Enter your email" {...field} />
-              </FormControl>
-              
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <h2 className="font-semibold ">Contact us</h2>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2  w-full  p-2 px-6  mt-4">
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Name</FormLabel>
+                  <FormControl>
+                    <Input className="bg-blue-50 border-white border  focus:!border-0 focus:!outline-none focus:!ring-0" placeholder="Enter your name" {...field} />
+                  </FormControl>
 
-        <FormField
-          control={form.control}
-          name="message"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Query</FormLabel>
-              <FormControl>
-                <Input placeholder=" Your query" {...field} />
-              </FormControl>
-              
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit">Submit</Button>
-      </form>
-    </Form>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input className="bg-blue-50  border-white border focus:!border-0 focus:!outline-none focus:!ring-0" placeholder="Enter your email" {...field} />
+                  </FormControl>
+
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Query</FormLabel>
+                  <FormControl>
+                    <Textarea className="bg-blue-50 focus:!outline-none focus:!ring-0 border-white bottom " rows={6} placeholder=" Your query" {...field} />
+                  </FormControl>
+
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button className="p-2 w-full" type="submit">Submit</Button>
+          </form>
+        </Form>
+      </div>
+      <div className=" flex flex-col flex-1  justify-center items-center h-full w-full bg-blue-50 rounded-3xl border-2 border-t-emerald-300 pt-5">
+
+        <div className="  flex flex-col items-center  p-2   w-full ">
+          <p className="font-semibold">Find us on map..</p>
+          <Map />
+        </div>
+      </div>
     </section>
   )
 }

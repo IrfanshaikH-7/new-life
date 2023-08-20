@@ -6,18 +6,18 @@ const page = () => {
   return (
     <>
       <section>
-        <div className='inset-x-0 top-0 z-[99999]  fixed'>
-          <div className='max-w-[90%] mx-auto '>
+        <div className='inset-x-0 z-50 top-0  hidden md:flex fixed'>
+          <div className='w-[90%] mx-auto '>
             <Navbar />
           </div>
         </div>
-        <div className="  mt-52 w-full flex h-full justify-center items-center">
+        <div className="mt-52 w-full flex h-full justify-center items-center">
           <div className="hidden sm:flex h-full w-full items-center justify-center max-w-7xl">
             <Slider />
           </div>
         </div>
         <div className="max-w-7xl mx-auto">
-          <h1 className="max-w-7xl  mt-12 mx-auto text-center text-3xl ">
+          <h1 className="max-w-7xl  mt-12 mx-auto text-center text-3xl font-semibold ">
             Work we do...
           </h1>
 
@@ -142,9 +142,12 @@ const page = () => {
 
 
           </div>
-          <p className="text-slate-500 text-center mt-8 ">
+          <div className="text-slate-500 h-full text-center mt-8 ">
+            <p >
             We offer a wide range of crane services for any project size and scope. Whether you need a crane for a day, a week, or a month, we have the right equipment and personnel for the job. We can handle any lifting challenge, from heavy machinery and materials to delicate artworks and sculptures. We have experience working with clients from various sectors, such as residential, commercial, industrial, and public.
           </p>
+          </div>
+          
 
         </div>
 

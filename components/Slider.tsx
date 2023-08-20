@@ -58,6 +58,7 @@ export default function App() {
   const [active, setActive] = useState(-1)
   return (
     <>
+    
       <Swiper
         slidesPerView={3}
         centeredSlides={true}
