@@ -9,7 +9,7 @@ const Map = () => {
         height="0" 
         style={{border:"0" }} 
          loading="lazy" 
-         className="rounded-xl sm:w-[480px] md:w-[500px] h-[200px] w-[290px] lg:w-[400px] lg:h-[408px] "
+         className="rounded-xl sm:w-[480px] md:w-[500px] h-[100px] w-[280px] lg:w-[400px] lg:h-[408px] "
          >
 
          </iframe>

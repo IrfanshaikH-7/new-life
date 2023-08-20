@@ -11,7 +11,7 @@ const page = () => {
             <Navbar />
           </div>
         </div>
-        <div className="mt-52 w-full flex h-full justify-center items-center">
+        <div className="mt-24 w-full flex h-full justify-center items-center">
           <div className="hidden sm:flex h-full w-full items-center justify-center max-w-7xl">
             <Slider />
           </div>

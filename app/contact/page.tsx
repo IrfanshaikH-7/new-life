@@ -8,18 +8,18 @@ import React from 'react'
 const page = () => {
   return (
     <>
-      <div className='inset-x-0 z-[99999] top-0  w-full hidden md:flex fixed'>
-        <div className='w-[90%] mx-auto'>
-          <Navbar />
+      <div className='inset-x-0 z-50 top-0 w-auto fixed'>
+          <div className='w-full  md:w-[90%] mx-auto'>
+            <Navbar />
+          </div>
         </div>
-      </div>
       <div className='w-[90%] 
        mx-auto h-screen lg:h-screen relative '>
 
-        <div className='flex -z-10 flex-col md:flex-row h-[60%] max-w-[95%] mx-auto shadow-2xl lg:items-start  rounded-lg mt-8 lg:mt-24 items-center justify-center pt-8'>
+        <div className='flex -z-10 flex-col md:flex-row h-[60%] w-[95%] mx-auto shadow-2xl lg:items-start  rounded-lg mt-16 lg:mt-24 items-center justify-center pt-8'>
 
           <div className='flex flex-1 flex-col justify-center items-center'>
-            <p className='text-4xl font-semibold pt-9'>Get in touch. </p>
+            <p className='text-4xl font-semibold pt-4 lg:pt-12'>Get in touch. </p>
             <div className='mt-4 flex flex-col items-center text-base font-medium'>
               <div className='flex'>
                 <Phone className='px-1' />

@@ -104,9 +104,9 @@ export function ContactForm() {
           </form>
         </Form>
       </div>
-      <div className=" flex flex-col flex-1  justify-center items-center h-full w-full bg-blue-50 rounded-3xl border-2 border-t-emerald-300 pt-5">
+      <div className=" flex flex-col md:flex-1  justify-center items-center h-56 sm:h-full w-full bg-blue-50 rounded-3xl border-2 border-t-emerald-300 pt-5">
 
-        <div className="  flex flex-col items-center  p-2   w-full ">
+        <div className="  flex flex-col items-center  p-2  w-full ">
           <p className="font-semibold">Find us on map..</p>
           <Map />
         </div>
