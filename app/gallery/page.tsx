@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar"
 const page = () => {
   return (
     <div className="flex w-auto h-screen flex-col ">
-      <div className='inset-x-0 hidden md:flex top-0 fixed'>
+      <div className='inset-x-0 md:flex top-0 fixed'>
         <div className='md:w-[90%] w-full mx-auto'>
           <Navbar />
         </div>

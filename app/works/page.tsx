@@ -6,8 +6,8 @@ const page = () => {
   return (
     <>
       <section>
-        <div className='inset-x-0 z-50 top-0  hidden md:flex fixed'>
-          <div className='w-[90%] mx-auto '>
+        <div className='inset-x-0 z-50 top-0 w-auto fixed'>
+          <div className='w-full  md:w-[90%] mx-auto'>
             <Navbar />
           </div>
         </div>
