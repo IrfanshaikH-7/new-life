@@ -1,28 +1,54 @@
 import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
-  } from "@/components/ui/sheet"
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import { NavLinks } from "@/contants"
+import { AlignHorizontalJustifyCenter } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 const MobileSidebar = () => {
-  return (
-    <div className="h-4 w-full bg-black top-0 fixed">
+  const pathname  = usePathname();
 
-<Sheet>
-  <SheetTrigger>Open</SheetTrigger>
-  <SheetContent>
-    <SheetHeader>
-      <SheetTitle>Are you sure absolutely sure?</SheetTitle>
-      <SheetDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </SheetDescription>
-    </SheetHeader>
-  </SheetContent>
-</Sheet>
+  return (
+    <div className=" flex flex-col  items-center h-full w-full  top-0  ">
+      <div className='h-10 w-56 relative rounded-lg cursor-pointer p-2 mb-4'>
+        <Link
+          href='/'
+        >
+          <Image
+            src="/assets/logo1.png"
+            fill
+            alt='logo'
+            className='object-cover shadow-sm shadow-cyan-400 rounded-lg border-blue-500 border-2'
+          />
+        </Link>
+      </div>
+      {
+        NavLinks.map((link) => (
+          <>
+
+
+            <div className="flex flex-col w-full">
+              <Link
+                href={link.route}
+                className={`${pathname === link.route ?`bg-blue-100`: `bg-transparent`} w-full text-center justify-center items-center py-3 mt-[2px] text-lg font-semibold hover:bg-blue-100  rounded-lg cursor-pointer transition duration-300`}
+              >
+                <div>
+                  <link.icon/>
+                </div>
+                {link.label}
+              </Link>
+            </div>
+          </>
+
+        ))
+      }
     </div>
   )
 }

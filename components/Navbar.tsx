@@ -14,15 +14,16 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import MobileSidebar from './MobileSidebar'
 
 function Navbar() {
   const pathname = usePathname()
   const navref = useRef()
   return (
     <>
-      <div className=" flex justify-between items-center h-auto w-full px-6 py-2 md:hidden shadow-lg top-0 fixed">
+      <div className=" flex justify-between items-center h-auto w-full  px-6 py-2 md:hidden shadow-lg top-0 fixed ">
 
-        <Sheet>
+        <Sheet >
           <SheetTrigger className='text-4xl font-extrabold'>
             <div className='h-10 p-2'>
               <LayoutGrid height={28} width={28} />
@@ -30,12 +31,10 @@ function Navbar() {
             
           </SheetTrigger>
           <SheetContent side={'left'}>
-            <SheetHeader>
-              <SheetDescription>
-                This action cannot be undone. This will permanently delete your account
-                and remove your data from our servers.
-              </SheetDescription>
-            </SheetHeader>
+            <div className='w-full h-full'>
+              <MobileSidebar />
+            </div>
+            
           </SheetContent>
         </Sheet>
         <div className='h-10 w-56 relative rounded-lg cursor-pointer'>
