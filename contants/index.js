@@ -23,7 +23,7 @@ export const NavLinks = [
     {
         route: '/contact',
         label: "Contact",
-        icon: "AlignHorizontalJustifyCenter"
+        icon:"Phone"
     },
 
 ]
