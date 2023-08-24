@@ -97,13 +97,22 @@ const page = () => {
                 alert(`ERROR! ${error.message}`);
               }}
             />
-            {images && <Image
+            
+            {
+            images != "" ?(
+            <div className="h-72 w-96 relative rounded-md mt-2">
+              <Image
               src={images}
               alt="upload-img"
-              width={32}
-              height={32}
-              className="object-contain"
-            />}
+              fill
+              className="object-cover"
+            />
+              </div>):
+            (
+              <div className=" flex justify-center items-center text-slate-500 h-72 w-96 border border-blue-50 rounded-md mt-2">
+                preview
+            </div>
+            )}
           </main>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2  w-full  p-2 px-6  mt-4">
@@ -112,7 +121,7 @@ const page = () => {
                 name="title"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Title</FormLabel>
+                    <FormLabel className="text-base">Title</FormLabel>
                     <FormControl>
                       <Input className="bg-blue-50 border-white border  focus:!border-0 focus:!outline-none focus:!ring-0" placeholder="Enter your name" {...field} />
                     </FormControl>
@@ -127,10 +136,10 @@ const page = () => {
                 name="taq"
                 render={() => (
                   <FormItem>
-                    <div className="mb-4">
-                      <FormLabel className="text-base">Sidebar</FormLabel>
+                    <div className="mt-3">
+                      <FormLabel className="text-base">Work type</FormLabel>
                       <FormDescription>
-                        Select the items you want to display in the sidebar.
+                        Select taq to add work type
                       </FormDescription>
                     </div>
                     {items.map((item) => (
@@ -170,7 +179,7 @@ const page = () => {
                   </FormItem>
                 )}
               />
-              <Button type="submit" >Submit</Button>
+              <Button className="w-full" type="submit" >Submit</Button>
             </form>
           </Form>
         </div>
