@@ -5,10 +5,9 @@ const AdminSchema = new mongoose.Schema({
 
     username: {type: String, required: true, unique: true},
     password: {type: String, required: true},
-    role: {type: String, default:'member'}
 
 })
 
-const Admin = mongoose.model("Admin", AdminSchema);
+const Admin = mongoose.models.Admin || mongoose.model("Admin", AdminSchema);
 
-module.exports = Admin;
+export default Admin;

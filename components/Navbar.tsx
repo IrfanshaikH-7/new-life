@@ -2,7 +2,7 @@
 import { NavLinks } from '@/contants/index.js'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import * as z from 'zod'
 import { LayoutGrid, Sparkle } from 'lucide-react';
 
@@ -43,8 +43,10 @@ import { adminSchema } from '@/lib/validations/admin'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { Button } from './ui/button'
+import { addAdmin, authorizeAdmin } from '@/lib/server-actions'
 
 function Navbar() {
+  const [active, SetActive] = useState(false)
   const pathname = usePathname()
   const navref = useRef()
   const router = useRouter();
@@ -53,15 +55,26 @@ function Navbar() {
     resolver: zodResolver(adminSchema),
     defaultValues: {
       username: "",
-      password:"",
+      password: "",
+
     },
   })
 
-  function onSubmit(values: z.infer<typeof adminSchema>) {
+  async function onSubmit(values: z.infer<typeof adminSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values)
-    router.push('/admin');
+    const authAdmin = await authorizeAdmin({
+      username: values.username,
+      password: values.password,
+    })
+    if(authAdmin) {
+      router.push('/admin');
+      SetActive(true)
+    }
+      else null;
+
+
   }
 
 
@@ -116,7 +129,7 @@ function Navbar() {
           {NavLinks.map((link, i) => (
             <div className='flex p-2 ml-1 lg:ml-10' key={link.label + i}>
               <Link
-              key={link.label + i}
+                key={link.label + i}
                 href={link.route}
                 className={`${link.route === pathname ? "border-b-red-700 border-b-2 " : ""} `}
               >
@@ -129,53 +142,55 @@ function Navbar() {
 
           ))}
 
-          <Dialog>
-            <DialogTrigger>
-              <div className='ml-8 p-2' >
-                [Admin]
-              </div>
+          {!active &&
+            <Dialog>
+              <DialogTrigger>
+                <div className='ml-8 p-2' >
+                  [Admin]
+                </div>
 
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2  w-full ">
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2  w-full ">
 
-                    <FormField
-                      control={form.control}
-                      name="username"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Username</FormLabel>
-                          <FormControl>
-                            <Input className="bg-blue-50 border-white border  focus:!border-0 focus:!outline-none focus:!ring-0" placeholder="username" {...field} />
-                          </FormControl>
+                      <FormField
+                        control={form.control}
+                        name="username"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Username</FormLabel>
+                            <FormControl>
+                              <Input className="bg-blue-50 border-white border  focus:!border-0 focus:!outline-none focus:!ring-0" placeholder="username" {...field} />
+                            </FormControl>
 
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    
 
-                    <FormField
-                      control={form.control}
-                      name="password"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Password</FormLabel>
-                          <FormControl>
-                            <Input className="bg-blue-50 border-white border  focus:!border-0 focus:!outline-none focus:!ring-0" placeholder="password" {...field} />
-                          </FormControl>
+                      <FormField
+                        control={form.control}
+                        name="password"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Password</FormLabel>
+                            <FormControl>
+                              <Input className="bg-blue-50 border-white border  focus:!border-0 focus:!outline-none focus:!ring-0" placeholder="password" {...field} />
+                            </FormControl>
 
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <Button className="p-2 w-full" type="submit">Submit</Button>
-                  </form>
-                </Form>
-              </DialogHeader>
-            </DialogContent>
-          </Dialog>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <Button className="p-2 w-full" type="submit">Submit</Button>
+                    </form>
+                  </Form>
+                </DialogHeader>
+              </DialogContent>
+            </Dialog>}
 
 
 

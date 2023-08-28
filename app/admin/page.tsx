@@ -29,10 +29,13 @@ import { useForm } from "react-hook-form"
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
 import Image from "next/image";
+import { addAdmin } from "@/lib/server-actions";
+import { usePathname } from "next/navigation";
 
 
 const page = () => {
   const [images, setImages] = useState('')
+  const pathname = usePathname()
 
 
   const form = useForm<z.infer<typeof postSchema>>({
@@ -42,8 +45,8 @@ const page = () => {
       taq: ['residential'],
     },
   })
-  const onSubmit = (values: z.infer<typeof postSchema>) => {
-    
+  const onSubmit = async(values: z.infer<typeof postSchema>) => {
+      
     console.log(values);
     form.reset();
   }
