@@ -1,14 +1,6 @@
-"use client";
-
-// You need to import our styles for the button to look right. Best to import in the root /layout.tsx but this is fine
-import "@uploadthing/react/styles.css";
-
-import { UploadButton } from "@/utils/uploadthing";
-
-
-
+"use client"
+import React from 'react'
 import * as z from "zod";
-import Navbar from "@/components/Navbar"
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -19,8 +11,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
-
-
 import { toast } from "@/components/ui/use-toast"
 import { Input } from "@/components/ui/input"
 import { postSchema } from "@/lib/validations/post"
@@ -31,56 +21,44 @@ import { useState } from "react";
 import Image from "next/image";
 import { addAdmin } from "@/lib/server-actions";
 import { usePathname } from "next/navigation";
+import { UploadButton } from "@/utils/uploadthing";
 
 
-const page = () => {
-  const [images, setImages] = useState('')
-  const pathname = usePathname()
-
-
-  const form = useForm<z.infer<typeof postSchema>>({
-    resolver: zodResolver(postSchema),
-    defaultValues: {
-      title: "",
-      taq: ['residential'],
-    },
-  })
-  const onSubmit = async(values: z.infer<typeof postSchema>) => {
-      
-    console.log(values);
-    form.reset();
-  }
-
-  const items = [
-    {
-      id: "residential",
-      label: "Residential",
-    },
-    {
-      id: "industrial",
-      label: "Industrial",
-    },
-    {
-      id: "others",
-      label: "Others",
-    },
-
-  ] as const
-
+const InputForm = () => {
+    const [images, setImages] = useState('')
+    const pathname = usePathname()
+  
+  
+    const form = useForm<z.infer<typeof postSchema>>({
+      resolver: zodResolver(postSchema),
+      defaultValues: {
+        title: "",
+        taq: ['residential'],
+      },
+    })
+    const onSubmit = async(values: z.infer<typeof postSchema>) => {
+        
+      console.log(values);
+      form.reset();
+    }
+  
+    const items = [
+      {
+        id: "residential",
+        label: "Residential",
+      },
+      {
+        id: "industrial",
+        label: "Industrial",
+      },
+      {
+        id: "others",
+        label: "Others",
+      },
+  
+    ] as const
   return (
-    <>
-      <div className='inset-x-0 z-10 top-0 w-full sticky'>
-        <div >
-          <Navbar />
-        </div>
-      </div>
-      <section className="flex mt-24  h-full w-11/12  mx-auto">
-        <div className="w-96 bg-blue-700 h-full ">
-          hello
-        </div>
-
-
-        <div className=" flex flex-col justify-center items-center p-3 flex-auto bg-blue-200 h-full w-full">
+    <div className=" flex flex-col justify-center items-center p-3 flex-auto bg-blue-200 h-full w-full">
           <main className="flex h-full flex-col items-center justify-between p-2">
             <UploadButton
               endpoint="imageUploader"
@@ -186,10 +164,7 @@ const page = () => {
             </form>
           </Form>
         </div>
-
-      </section>
-    </>
   )
 }
 
-export default page
+export default InputForm

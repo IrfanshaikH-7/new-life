@@ -8,12 +8,7 @@ import React from 'react'
 const page = () => {
   return (
     <>
-      <div className='inset-x-0 z-50 top-0 w-auto fixed'>
-          <div className='w-full  md:w-[90%] mx-auto'>
-            <Navbar />
-          </div>
-        </div>
-      <div className='w-[90%] 
+      <div className='md:w-[90%] w-full
        mx-auto h-screen lg:h-screen relative '>
 
         <div className='flex -z-10 flex-col md:flex-row h-[60%] w-[95%] mx-auto shadow-2xl lg:items-start  rounded-lg mt-16 lg:mt-24 items-center justify-center pt-8'>

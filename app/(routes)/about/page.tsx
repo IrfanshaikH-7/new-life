@@ -5,11 +5,6 @@ import Image from "next/image"
 const page = () => {
   return (
     <>
-      <div className='inset-x-0 z-50 top-0 w-auto fixed'>
-          <div className='w-full  md:w-[90%] mx-auto'>
-            <Navbar />
-          </div>
-        </div>
       <div className="h-full w-[90%] mx-auto">
         <div className="h-[60%] w-[95%] mt-24  mx-auto shadow-2xl lg:items-start  rounded-lg  items-center justify-between pt-8'">
       <AboutHero />
