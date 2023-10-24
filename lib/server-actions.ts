@@ -14,6 +14,7 @@ export const addAdmin = async({username, password, path}: Params) => {
 
         })
         revalidatePath(path);
+        
     } catch (error: any) {
         throw new Error(`Add admin error: ${error.message}`);
     }

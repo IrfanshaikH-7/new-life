@@ -53,7 +53,7 @@ const page = () => {
         <div className="border flex max-w-xl md:max-w-7xl w-full h-auto mx-auto rounded-lg p-2 gap-4 overflow-x-auto overflow-y-hidden ">
           {
             imgs.map((img: any, i) => (
-              <div className='!rounded-3xl h-full w-full '>
+              <div key={img.label} className='!rounded-3xl h-full w-full '>
                 <div key={img.label} className="w-96 aspect-[16/12]  relative">
                   <Image
                     src={img.image}
@@ -66,6 +66,10 @@ const page = () => {
             ))
           }
         </div>
+
+
+
+
         <div className="max-w-7xl mx-auto">
           <h1 className="max-w-7xl  mt-12 mx-auto text-center text-3xl font-semibold ">
             Work we do...
@@ -78,8 +82,7 @@ const page = () => {
               <br />
               We Operate cranes for various purposes, such as lifting materials, equipment, or personnel, loading or unloading trucks or ships, erecting structures, or demolishing buildings while Maintaining cranes to ensure their optimal performance and safety.
             </p>
-            <div className="flex flex-col md:flex-row 
-            max-w-7xl mx-auto mt-2 p-4">
+            <div className="flex flex-col md:flex-row -w-7xl mx-auto mt-2 p-4">
               <div className="flex-1 p-2 justify-center items-center ">
 
                 <div className="self-center lg:mt-24 mt-6" >
