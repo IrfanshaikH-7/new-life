@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar'
 
 export default function Home() {
   return (
-    <section className='flex flex-col justify-center items-center '>
+    <section className='flex flex-col justify-center items-center overflow-hidden'>
       <div className='relative z-10 md:h-screen h-full py-24 md:py-4 w-full flex flex-col justify-center items-center bg-white'>
         <div className='w-[90%] md:h-[80%] aspect-video bg-blue-200 rounded-lg z-[40] shadow-2xl'>
           <Hero />
@@ -17,7 +17,7 @@ export default function Home() {
 
       <div className='relative h-auto w-full'>
 
-        <div className='inset-x-0 top-0 fixed  hidden lg:block'>
+        <div className='inset-x-0 top-0 fixed  !hidden !lg:block'>
           <div className='max-w-[90%]  z-40 mx-auto'>
             <Navbar />
           </div>
