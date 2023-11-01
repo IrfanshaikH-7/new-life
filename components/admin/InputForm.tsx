@@ -58,8 +58,8 @@ const InputForm = () => {
   
     ] as const
   return (
-    <div className=" flex flex-col justify-center items-center p-3 flex-auto bg-blue-200 h-full w-full">
-          <main className="flex h-full flex-col items-center justify-between p-2">
+    <div className=" flex flex-col justify-center items-center p-3 flex-auto bg-slate-300 h-full w-full px-24">
+          <main className="flex h-full flex-col items-center justify-between p-2 aspect-square">
             <UploadButton
               endpoint="imageUploader"
               onClientUploadComplete={(res) => {
@@ -77,6 +77,7 @@ const InputForm = () => {
                 // Do something with the error.
                 alert(`ERROR! ${error.message}`);
               }}
+              
             />
             
             {
