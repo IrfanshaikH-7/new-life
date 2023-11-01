@@ -105,7 +105,7 @@ const InputForm = () => {
                   <FormItem>
                     <FormLabel className="text-base">Title</FormLabel>
                     <FormControl>
-                      <Input className="bg-blue-50 border-white border  focus:!border-0 focus:!outline-none focus:!ring-0" placeholder="Enter your name" {...field} />
+                      <Input className="bg-blue-50 border-white border  focus:!border-0 focus:!outline-none focus:!ring-0" placeholder="Image title" {...field} />
                     </FormControl>
 
                     <FormMessage />

@@ -13,7 +13,7 @@ const AboutHero = () => {
         <div className="w-[2px] h-28 hidden lg:flex bg-gradient-to-t from-white to-black bottom-0 rounded-lg" />
       </div>
 
-      <div className="flex items-center justify-center w-96  z-50 md:w-full md:h-full relative ">
+      <div className="flex items-center justify-center w-96  z-10 md:w-full md:h-full relative ">
         <Image 
           src='/assets/aboutHr.png'
           alt="aboutHr"

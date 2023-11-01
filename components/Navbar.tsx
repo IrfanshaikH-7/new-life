@@ -80,7 +80,7 @@ function Navbar() {
 
   return (
     <>
-      <div className=" flex justify-between items-center h-auto w-full mx-auto  px-6 py-2 md:invisible shadow-lg top-0 fixed ">
+      <div className=" flex justify-between items-center h-auto w-full mx-auto  px-6 py-2 md:invisible shadow-lg top-0 fixed z-50">
 
         <Sheet >
           <SheetTrigger className='text-4xl font-extrabold'>

@@ -36,13 +36,12 @@ const page = async () => {
   }
 
   return (
-    <section className="h-full w-full">
-      <div className="mt-24 flex justify-center items-center md:bg-blue-500 md:!flex-row flex-col">
-        <div className="bg-slate-800 md:bg-red-700 h-full w-2/6 ">
-
-          dis fugiat obcaecati, rerum quidem ab, fugit magnam sit dignissimos labore alias voluptates laborum voluptate ut eius commodi? Ex rerum suscipit numquam, perferendis incidunt laboriosam? Unde ipsa reprehenderit, eaque quod nemo ratione vel? In, atque.
+    <section className="h-full w-full px-4">
+      <div className="mt-24 flex justify-center items-center md:!flex-row flex-col gap-2 rounded-md overflow-hidden">
+        <div className="flex justify-center items-center bg-slate-200 md:bg-red-700 h-full md:w-2/6 lg:w-1/6 w-full p-4 rounded-md">
+          <p className=" px-12 md:px-2 py-2 bg-slate-300 rounded-md">Upload Images</p>
         </div>
-        <div className="h-full w-4/6 bg-slate-200">
+        <div className="h-full md:w-4/6 lg:w-5/6 w-full bg-slate-200 rounded-md overflow-hidden">
           <InputForm />
         </div>
 
